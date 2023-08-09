@@ -48,13 +48,18 @@
                     <div class="card-header">
                         <div class="flex justify-between items-center">
                             <h4 class="card-title">Administrateurs</h4>
-                            <a href="/administrateurs/admin-add">
-                                <button class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-3 rounded-lg">Ajouter</button>
-                            </a>
+                            <div class="flex items-center gap-2">
+                                <a class="visible" href="/admin-add">
+                                <button type="button" class="btn-code" data-fc-type="collapse" data-fc-target="pristineJSValidation">
+                                    <i class="mgc_user_1_fill text-lg"></i>
+                                    <span class="ms-2">Ajouter</span>
+                                </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-sm text-slate-700 dark:text-slate-400 mb-4"> Ajouter des admonistrateurs dans votre application  </p>
+                        <p class="text-sm text-slate-700 dark:text-slate-400 mb-4"> Ajouter des admnistrateurs dans votre application  </p>
 
                         <div id="table-gridjs">
 
@@ -93,7 +98,7 @@
                                             </th>
                                             <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 120px;">
                                                 <div class="gridjs-th-content">Actions</div>
-                                                <a href="/administrateurs/admin-edit">
+                                                <a href="/admin-edit/1">
                                                     <button class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-3 rounded-lg">Ajouter</button>
                                                 </a>
                                             </th>

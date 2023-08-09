@@ -7,21 +7,21 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 
-@RequestMapping("/administrateurs")
+
 @Controller
 class AdministrateurController {
 
-    @GetMapping("/")
+    @GetMapping("/administrateurs")
     fun LinkUsers(): String? {
         return "administrateurs/admin-list" // Ceci correspond au nom du fichier HTML sans l'extension
     }
 
-    @GetMapping("/add-adinistrateur")
+    @GetMapping("/admin-add")
     fun LinkAdd(): String? {
         return "administrateurs/admin-add" // Ceci correspond au nom du fichier HTML sans l'extension
     }
 
-    @GetMapping("/edit-adinistrateur/{id}")
+    @GetMapping("/admin-edit/{id}")
     fun LinkEdit(@PathVariable("id") id:String ): String? {
         var idGet = id;
         System.out.println(id);
