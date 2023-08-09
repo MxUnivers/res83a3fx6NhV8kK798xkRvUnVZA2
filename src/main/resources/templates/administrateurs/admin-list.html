@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="/fragments/fragment-head :: head" />
+<body >
+
+<div class="flex wrapper">
+    <th:block th:include="/fragments/fragment-sidebar :: sidebar" />
+    <main class="page-content">
+        <!-- fragment -->
+        <th:block th:include="/fragments/fragment-topbar :: topbar" />
+        <th:block th:include="/fragments/fragment-topbar-search :: topbar-search" />
+
+
+
+
+
+
+        <!-- Page des contenu de page tableaux -->
+        <main class="flex-grow p-6">
+
+            <!-- Page Title Start -->
+            <div class="flex justify-between items-center mb-6">
+                <h4 class="text-slate-900 dark:text-slate-200 text-lg font-medium">Administrateurs</h4>
+
+                <div class="md:flex hidden items-center gap-2.5 text-sm font-semibold">
+                    <div class="flex items-center gap-2">
+                        <a href="#" class="text-sm font-medium text-slate-700 dark:text-slate-400">Konrix</a>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <i class="mgc_right_line text-lg flex-shrink-0 text-slate-400 rtl:rotate-180"></i>
+                        <a href="#" class="text-sm font-medium text-slate-700 dark:text-slate-400">Table</a>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <i class="mgc_right_line text-lg flex-shrink-0 text-slate-400 rtl:rotate-180"></i>
+                        <a href="#" class="text-sm font-medium text-slate-700 dark:text-slate-400" aria-current="page">Data Table</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Listes des administrateurs  -->
+            <div class="flex flex-col gap-6">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="flex justify-between items-center">
+                            <h4 class="card-title">Administrateurs</h4>
+                            <a href="/administrateurs/admin-add">
+                                <button class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-3 rounded-lg">Ajouter</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-slate-700 dark:text-slate-400 mb-4"> Ajouter des admonistrateurs dans votre application  </p>
+
+                        <div id="table-gridjs">
+
+                            <div role="complementary" class="gridjs gridjs-container" style="width: 100%;"><div class="gridjs-head">
+                                <div class="gridjs-search">
+                                    <input type="search" placeholder="Type a keyword..." aria-label="Type a keyword..." class="gridjs-input gridjs-search-input">
+                                </div>
+                            </div>
+                                <div class="gridjs-wrapper" style="height: auto;">
+                                    <table role="grid" class="gridjs-table" style="height: auto;">
+                                        <thead class="gridjs-thead">
+                                        <tr class="gridjs-tr">
+                                            <th data-column-id="id" class="gridjs-th gridjs-th-sort" tabindex="0">
+                                                <div class="gridjs-th-content">ID</div>
+                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                            </th>
+                                            <th data-column-id="name" class="gridjs-th gridjs-th-sort" tabindex="0">
+                                                <div class="gridjs-th-content">Name</div>
+                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                            </th>
+                                            <th data-column-id="email" class="gridjs-th gridjs-th-sort" tabindex="0">
+                                                <div class="gridjs-th-content">Email</div>
+                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                            </th>
+                                            <th data-column-id="position" class="gridjs-th gridjs-th-sort" tabindex="0">
+                                                <div class="gridjs-th-content">Position</div>
+                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                            </th>
+                                            <th data-column-id="company" class="gridjs-th gridjs-th-sort" tabindex="0">
+                                                <div class="gridjs-th-content">Company</div>
+                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                            </th>
+                                            <th data-column-id="country" class="gridjs-th gridjs-th-sort" tabindex="0">
+                                                <div class="gridjs-th-content">Country</div>
+                                                <button tabindex="-1" aria-label="Sort column ascending" title="Sort column ascending" class="gridjs-sort gridjs-sort-neutral"></button>
+                                            </th>
+                                            <th data-column-id="actions" class="gridjs-th gridjs-th-sort" tabindex="0" style="width: 120px;">
+                                                <div class="gridjs-th-content">Actions</div>
+                                                <a href="/administrateurs/admin-edit">
+                                                    <button class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-3 rounded-lg">Ajouter</button>
+                                                </a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                        <tbody class="gridjs-tbody">
+                                        <tr class="gridjs-tr">
+                                            <td data-column-id="id" class="gridjs-td">
+                                                <span>
+                                                    <span class="fw-semibold">01</span>
+                                                </span>
+                                            </td>
+                                            <td data-column-id="name" class="gridjs-td">
+                                                Jonathan
+                                            </td>
+                                            <td data-column-id="email" class="gridjs-td">
+                                                <span>
+                                                    <a href="">jonathan@example.com</a>
+                                                </span>
+                                            </td>
+                                            <td data-column-id="position" class="gridjs-td">
+                                                Senior Implementation Architect
+                                            </td>
+                                            <td data-column-id="company" class="gridjs-td">
+                                                Hauck Inc
+                                            </td>
+                                            <td data-column-id="country" class="gridjs-td">
+                                                Holy See
+                                            </td>
+                                            <td data-column-id="actions" class="gridjs-td">
+                                                <span>
+                                                    <a href="#" class="text-reset text-decoration-underline">Details</a>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                           </table>
+                    </div>
+                                <div class="gridjs-footer">
+                                    <div class="gridjs-pagination">
+                                        <div role="status" aria-live="polite" class="gridjs-summary" title="Page 1 of 2">
+                                            Showing <b>1</b> to <b>5</b> of <b>10</b> results
+                                        </div>
+                                        <div class="gridjs-pages">
+                                            <button tabindex="0" role="button" disabled="" title="Previous" aria-label="Previous" class="">Previous</button>
+                                            <button tabindex="0" role="button" class="gridjs-currentPage" title="Page 1" aria-label="Page 1">1</button>
+                                            <button tabindex="0" role="button" class="" title="Page 2" aria-label="Page 2">2</button>
+                                            <button tabindex="0" role="button" title="Next" aria-label="Next" class="">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="gridjs-temp" class="gridjs-temp"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    </main>
+
+
+
+
+
+
+
+        <th:block th:include="/fragments/fragment-footer :: footer" />
+
+</div>
+
+
+<th:block th:include="/fragments/fragment-top-button :: topbutton" />
+<th:block th:include="/fragments/fragment-theme-settings :: theme-settings" />
+<!-- script -->
+<th:block th:include="/fragments/fragment-script :: script" />
+</body>
+</html>

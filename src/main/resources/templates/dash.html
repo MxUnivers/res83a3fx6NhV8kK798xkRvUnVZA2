@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<th:block th:include="/fragments/fragment-head :: head" />
+<body >
+
+<div class="flex wrapper">
+    <th:block th:include="/fragments/fragment-sidebar :: sidebar" />
+    <div class="page-content">
+        <!-- fragment -->
+        <th:block th:include="/fragments/fragment-topbar :: topbar" />
+        <th:block th:include="/fragments/fragment-topbar-search :: topbar-search" />
+        <th:block th:include="/fragments/fragment-main-dashboard :: main-dashboard" />
+        <th:block th:include="/fragments/fragment-footer :: footer" />
+    </div>
+</div>
+
+
+<th:block th:include="/fragments/fragment-top-button :: topbutton" />
+<th:block th:include="/fragments/fragment-theme-settings :: theme-settings" />
+<!-- script -->
+<th:block th:include="/fragments/fragment-script :: script" />
+</body>
+</html>
